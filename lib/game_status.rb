@@ -16,11 +16,11 @@ def won?(board)
 end
 
 def full?(board)
-  board.all {|index| position_taken?(board, index)} 
+  board.all {|index| position_taken?(board, index)}
 end
 
 def draw?(board)
-  if full?(board) && !won?(board) 
+  if full?(board) && !won?(board)
     return true
   end
   return false
