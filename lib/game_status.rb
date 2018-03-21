@@ -14,3 +14,14 @@ def won?(board)
   end
   return false
 end
+
+def full?(board)
+  board.all {|index| position_taken?(board, index)} 
+end
+
+def draw?(board)
+  if full?(board) && !won?(board) 
+    return true
+  end
+  return false
+end
